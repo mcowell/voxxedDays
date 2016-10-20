@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ExchangeController {
 
-	@RequestMapping(value="/{currency}/exchange-rate/", method = RequestMethod.GET)
+	@RequestMapping(value="/{currency}/exchange-rate", method = RequestMethod.GET)
 	@ResponseBody
 	public String getExchangeRate(@PathVariable("currency") String currency) {
 		if (currency.equals("usd"))
